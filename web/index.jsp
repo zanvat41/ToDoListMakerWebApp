@@ -13,10 +13,10 @@
 <body>
     <div style="background-color:#aaaaff">
         <h1>Welcome to the 'To Do List Maker' web app!</h1>
-        <h3>Please <a href="register.html">sign up</a> or log in to continue.</h3>
+        <h3>Please <a href="register.jsp">sign up</a> or log in to continue.</h3>
     </div>
     <br />
-    <form method="post" action="home.html">
+    <form method="post" action="home.jsp">
         <div class="container">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" maxlength="30" required />
