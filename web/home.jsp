@@ -32,5 +32,26 @@
         <input type="text" name="owner" id="owner" maxlength="30" />
     </div>
     <p></p>
+    <div class="details">
+        <h2>Items</h2>
+        <div style="height:50px">
+            <button title="Add Item">+</button>
+            <button title="Delete Item">-</button>
+            <button title="Move Up">Up</button>
+            <button title="Move Down">Down</button>
+        </div>
+        <table bgcolor = white>
+            <tr><th>Category</th><th>Description</th><th>Start Date</th><th>End Date</th><th>Completed</th></tr>
+            <c:forEach item = "${requestScope.empList}" var = "emp">
+                <tr>
+                    <td><c:out value = "${emp.category}"></c:out></td>
+                    <td><c:out value = "${emp.description}"></c:out></td>
+                    <td><c:out value = "${emp.sDate}"></c:out></td>
+                    <td><c:out value = "${emp.eDate}"></c:out></td>
+                    <td><c:out value = "${emp.completed}"></c:out></td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
 </body>
 </html>
