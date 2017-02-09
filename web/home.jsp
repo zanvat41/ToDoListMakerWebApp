@@ -11,20 +11,89 @@
     <meta charset="UTF-8">
     <title>To Do List Maker</title>
     <style>
-        div.container {border: 3px solid #7777dd}
-        div.details {border: 2px solid #7777dd; padding-top: 5px; padding-left: 10px; padding-bottom: 20px; font-weight: bold}
+        .bodyBackground {
+            background-color: #f1f1f1;
+        }
+
+        .button {
+            -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+            background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+            background-color:#ffffff;
+            -moz-border-radius:5px;
+            -webkit-border-radius:5px;
+            border-radius:5px;
+            border:2px solid #969696;
+            display:inline-block;
+            cursor:pointer;
+            color:#4d4d4d;
+            font-family:"Arial", Helvetica, sans-serif;
+            font-size:18px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #ffffff;
+        }
+        .button:hover {
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+            background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+            background-color:#f6f6f6;
+        }
+        .button:active {
+            position:relative;
+            top:1px;
+            border:1px solid #f931ac;
+        }
+
+        .topText {
+            color:#4d4d4d;
+            text-align:left;
+            font-family:"Arial", Helvetica, sans-serif;
+            font-size:30px;
+        }
+        .promptText {
+            color:#4d4d4d;
+            text-align:left;
+            font-family:"Arial", Helvetica, sans-serif;
+            font-size:20px;
+        }
+
+        input {
+            width: 250px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border: 3px solid #f931ac;
+        }
     </style>
 </head>
-<body bgcolor="#aaaaff">
-    <div class="container" style="height:50px">
-        <button title="Create a New To Do List">Create</button>
-        <button title="Load an Existing To Do List">Load</button>
-        <button title="Save this To Do List">Save</button>
-        <button title="Logout">Logout</button>
+<body class="bodyBackground">
+    <div class="controlBarContainer">
+        <button class=button title="Create a New To Do List">Create</button>
+        <button class=button title="Load an Existing To Do List">Load</button>
+        <button class=button title="Save this To Do List">Save</button>
+        <button class=button title="Logout">Logout</button>
     </div>
-    <h1>To Do List</h1>
+    <h1 class="topText">To Do List</h1>
     <div class="details">
-        <h2>Details</h2>
+        <h2 class="promptText">Details</h2>
         <label for="name">Name of Todo List: </label>
         <input type="text" name="name" id="name" maxlength="30" />
 
@@ -35,10 +104,10 @@
     <div class="details">
         <h2>Items</h2>
         <div style="height:50px">
-            <button title="Add Item">+</button>
-            <button title="Delete Item">-</button>
-            <button title="Move Up">Up</button>
-            <button title="Move Down">Down</button>
+            <button class=button title="Add Item">+</button>
+            <button class=button title="Delete Item">-</button>
+            <button class=button title="Move Up">Up</button>
+            <button class=button title="Move Down">Down</button>
         </div>
         <table bgcolor = white>
             <tr><th>Category</th><th>Description</th><th>Start Date</th><th>End Date</th><th>Completed</th></tr>
