@@ -9,9 +9,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="291465610520-pnb9ums0tmkhdos0pb4m2p5mptuol8l2.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>To Do List Maker</title>
     <style>
         /**
@@ -152,6 +152,8 @@
             function onSignIn(googleUser) {
                 // Useful data for your client-side scripts:
                 var profile = googleUser.getBasicProfile();
+
+                //get information from the profile
                 console.log("ID: " + profile.getId()); // Don't send this directly to your server!
                 console.log('Full Name: ' + profile.getName());
                 console.log('Given Name: ' + profile.getGivenName());
@@ -162,7 +164,7 @@
                 // The ID token you need to pass to your backend:
                 var id_token = googleUser.getAuthResponse().id_token;
                 console.log("ID Token: " + id_token);
-            };
+            }
         </script>
         <a href="#" onclick="signOut();">Sign out</a>
         <script>
