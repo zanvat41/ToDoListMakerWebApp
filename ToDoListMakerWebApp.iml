@@ -40,14 +40,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="AppEngine Dev 1.9.49" level="application_server_libraries" />
-    <orderEntry type="library" exported="" name="AppEngine Dev 1.9.49" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="AppEngine API" level="project" />
     <orderEntry type="library" exported="" name="AppEngine ORM" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/objectify-5.1.14.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/objectify-5.1.14.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

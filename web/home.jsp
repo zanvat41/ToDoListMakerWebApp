@@ -10,9 +10,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="291465610520-pnb9ums0tmkhdos0pb4m2p5mptuol8l2.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>To Do List Maker</title>
     <style>
         .bodyBackground {
@@ -105,15 +102,7 @@
         <button class=button title="Create a New To Do List">Create</button>
         <button class=button title="Load an Existing To Do List">Load</button>
         <button class=button title="Save this To Do List">Save</button>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <script>
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                    console.log('User signed out.');
-                });
-            }
-        </script>
+        <button class=button title="Logout">Logout</button>
     </div>
     <h1 class="topText">To Do List</h1>
     <div class="details">
