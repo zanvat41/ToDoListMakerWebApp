@@ -7,7 +7,7 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
@@ -17,7 +17,7 @@
     </facet>
     <facet type="google-app-engine" name="Google App Engine">
       <configuration>
-        <sdk-home-path>$USER_HOME$/Downloads/appengine-java-sdk-1.9.49</sdk-home-path>
+        <sdk-home-path>$USER_HOME$/Downloads/appengine-java-sdk-1.9.49/appengine-java-sdk-1.9.49</sdk-home-path>
         <run-enhancer-on-make>true</run-enhancer-on-make>
         <files-to-enhance>
           <file path="$MODULE_DIR$/src" />
@@ -40,11 +40,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev 1.9.49" level="application_server_libraries" />
-    <orderEntry type="library" scope="PROVIDED" name="AppEngine Dev 1.9.49" level="application_server_libraries" />
-    <orderEntry type="library" name="AppEngine API" level="project" />
-    <orderEntry type="library" name="AppEngine ORM" level="project" />
-    <orderEntry type="module-library">
+    <orderEntry type="library" exported="" name="AppEngine Dev 1.9.49" level="application_server_libraries" />
+    <orderEntry type="library" exported="" name="AppEngine Dev 1.9.49" level="application_server_libraries" />
+    <orderEntry type="library" exported="" name="AppEngine API" level="project" />
+    <orderEntry type="library" exported="" name="AppEngine ORM" level="project" />
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/objectify-5.1.14.jar!/" />
@@ -53,26 +53,26 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Spring-4.3.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Spring MVC-4.3.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-core:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.hsqldb:hsqldb:2.3.2" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.12" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.3" level="project" />
-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.3" level="project" />
-    <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
-    <orderEntry type="library" name="javax.json-1.0.4" level="project" />
-    <orderEntry type="library" name="SimpleAppFramework" level="project" />
+    <orderEntry type="library" exported="" name="Spring-4.3.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Spring MVC-4.3.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-core:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-webmvc:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-beans:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-context:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-aop:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-expression:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-web:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-jdbc:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.springframework:spring-tx:4.1.6.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.hsqldb:hsqldb:2.3.2" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.slf4j:jcl-over-slf4j:1.7.12" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
+    <orderEntry type="library" exported="" name="Maven: ch.qos.logback:logback-classic:1.1.3" level="project" />
+    <orderEntry type="library" exported="" name="Maven: ch.qos.logback:logback-core:1.1.3" level="project" />
+    <orderEntry type="library" exported="" name="Maven: jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" exported="" name="javax.json-1.0.4" level="project" />
+    <orderEntry type="library" exported="" name="SimpleAppFramework" level="project" />
   </component>
 </module>

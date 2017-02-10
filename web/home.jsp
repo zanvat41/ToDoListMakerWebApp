@@ -128,23 +128,13 @@
     <div class="details">
         <h2>Items</h2>
         <div style="height:50px">
-            <button class=button title="Add Item">+</button>
+            <form action="addItem.jsp">
+                <button class=button title="Add Item">+</button>
+            </form>
             <button class=button title="Delete Item">-</button>
             <button class=button title="Move Up">Up</button>
             <button class=button title="Move Down">Down</button>
         </div>
-        <table bgcolor = white>
-            <tr><th>Category</th><th>Description</th><th>Start Date</th><th>End Date</th><th>Completed</th></tr>
-            <c:forEach item = "${requestScope.empList}" var = "emp">
-                <tr>
-                    <td><c:out value = "${emp.category}"></c:out></td>
-                    <td><c:out value = "${emp.description}"></c:out></td>
-                    <td><c:out value = "${emp.sDate}"></c:out></td>
-                    <td><c:out value = "${emp.eDate}"></c:out></td>
-                    <td><c:out value = "${emp.completed}"></c:out></td>
-                </tr>
-            </c:forEach>
-        </table>
     </div>
 </body>
 </html>
