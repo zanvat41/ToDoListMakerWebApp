@@ -10,6 +10,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="291465610520-pnb9ums0tmkhdos0pb4m2p5mptuol8l2.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <title>To Do List Maker</title>
     <style>
         .bodyBackground {
@@ -102,7 +105,18 @@
         <button class=button title="Create a New To Do List">Create</button>
         <button class=button title="Load an Existing To Do List">Load</button>
         <button class=button title="Save this To Do List">Save</button>
-        <button class=button title="Logout">Logout</button>
+        <form action="index.jsp" method="post">
+            <div style="display:none" class="g-signin2" data-width="300" data-height="50" data-longtitle="true" data-theme="dark"></div>
+            <button type="submit" class=button title="Logout" onclick="signOut()">Logout</button>
+            <script>
+                function signOut() {
+                    var auth2 = gapi.auth2.getAuthInstance();
+                    auth2.signOut().then(function () {
+                        console.log('User signed out.');
+                    });
+                }
+            </script>
+        </form>
     </div>
     <h1 class="topText">To Do List</h1>
     <div class="details">
@@ -110,8 +124,8 @@
         <label for="name">Name of Todo List: </label>
         <input type="text" name="name" id="name" maxlength="30" />
 
-        <label for="owner">Owner: </label>
-        <input type="text" name="owner" id="owner" maxlength="30" />
+        <label>Owner: </label>
+        <label><%= request.getParameter("user_pass") %></label>
     </div>
     <p></p>
     <div class="details">
