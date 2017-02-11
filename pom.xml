@@ -7,7 +7,7 @@
 <artifactId>ToDoListMakerWebApp</artifactId>
 <packaging>war</packaging>
 <version>1.0-SNAPSHOT</version>
-<name>To Do List Maker Web App</name>
+<name>To Do List Maker Web App</name><url>http://maven.apache.org</url>
 
 <properties>
     <jdk.version>1.7</jdk.version>
@@ -17,6 +17,7 @@
     <jcl.slf4j.version>1.7.12</jcl.slf4j.version>
     <jstl.version>1.2</jstl.version>
     <servletapi.version>3.1.0</servletapi.version>
+    <cglib.version>2.2.2</cglib.version>
 </properties>
 
 <dependencies>
@@ -31,6 +32,12 @@
                 <artifactId>commons-logging</artifactId>
             </exclusion>
         </exclusions>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
     </dependency>
 
     <!-- Spring Web -->
@@ -81,7 +88,23 @@
         <scope>provided</scope>
     </dependency>
 
+    <!-- CGLib for @Configuration -->
+    <dependency>
+        <groupId>cglib</groupId>
+        <artifactId>cglib-nodep</artifactId>
+        <version>${cglib.version}</version>
+        <scope>runtime</scope>
+    </dependency>
+
 </dependencies>
+
+    <repositories>
+        <repository>
+            <id>springsource-milestones</id>
+            <name>SpringSource Milestones Proxy</name>
+            <url>https://oss.sonatype.org/content/repositories/springsource-milestones</url>
+        </repository>
+    </repositories>
 
 <build>
 
@@ -107,7 +130,7 @@
             <configuration>
                 <scanIntervalSeconds>10</scanIntervalSeconds>
                 <webApp>
-                    <contextPath>/spring-mvc-form</contextPath>
+                    <contextPath>/todolistmakerwebapp</contextPath>
                 </webApp>
             </configuration>
         </plugin>

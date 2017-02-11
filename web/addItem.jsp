@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>To Do List Maker - New List Item</title>
 	<style>
 		.bodyBackground {
@@ -111,25 +111,37 @@
 		<h3 class="promptText">Please enter all information to add your item to the to do list.</h3>
 	</div>
 	<br />
-	<form method="post" action="home.jsp">
-		<div class="container">
-			<label for="category">Category</label>
-			<input type="text" name="Category" id="category" maxlength="30" required>
-			<br /><br />
-			<label for="description">Description</label>
-			<input type="text" name="Description" id="description" required>
-			<br /><br />
-			<label for="startingdate">Starting Date</label>
-			<input type="date" name="Starting Date" id="startingdate" required>
-			<br /><br />
-			<label for="endingdate">Ending Date</label>
-			<input type="date" name="Ending Date" id="endingdate" required>
-			<br /><br />
-			<label for="completed">Completed</label>
-			<input type="checkbox" name="Completed" id="completed">
-			<br /><br />
-			<button class="button" type="submit">Submit</button>
-		</div>
-	</form>
+	<div align="center">
+		<form:form action="addItem" method="post" commandName="addItemForm">
+			<table border="0">
+				<tr>
+					<td colspan="2" align="center"><h2>Add New To Do List Task</h2></td>
+				</tr>
+				<tr>
+					<td>Category:</td>
+					<td><form:input path="category" /></td>
+				</tr>
+				<tr>
+					<td>Description:</td>
+					<td><form:input path="description" /></td>
+				</tr>
+				<tr>
+					<td>Starting Date (mm/dd/yyyy):</td>
+					<td><form:input path="startDate" /></td>
+				</tr>
+				<tr>
+					<td>End Date (mm/dd/yyyy):</td>
+					<td><form:input path="endDate" /></td>
+				</tr>
+				<tr>
+					<td>Completed:</td>
+					<td><form:checkbox path="completed" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="Register" /></td>
+				</tr>
+			</table>
+		</form:form>
+	</div>
 </body>
 </html>
