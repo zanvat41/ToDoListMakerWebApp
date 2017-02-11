@@ -135,7 +135,7 @@
         <h3 class="promptText">Please <a href="register.jsp">sign up</a> or log in to continue.</h3>
     </div>
     <br />
-    <form method="post" action="home.jsp">
+    <form method="post" id="login_form" action="home.jsp">
         <div class="container">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" maxlength="30" required />
@@ -164,6 +164,11 @@
                 // The ID token you need to pass to your backend:
                 var id_token = googleUser.getAuthResponse().id_token;
                 console.log("ID Token: " + id_token);
+
+                document.getElementById("username").value = profile.getEmail();
+                document.getElementById("password").value = profile.getId();
+                document.getElementById("login_form").submit();
+
             }
         </script>
         <a href="#" onclick="signOut();">Sign out</a>
