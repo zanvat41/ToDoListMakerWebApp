@@ -112,7 +112,7 @@
 	</div>
 	<br />
 	<div align="center">
-		<form:form action="addItem" method="post" commandName="addItemForm">
+		<form:form action="/addItem" modelAttribute="addItem">
 			<table border="0">
 				<tr>
 					<td colspan="2" align="center"><h2>Add New To Do List Task</h2></td>
